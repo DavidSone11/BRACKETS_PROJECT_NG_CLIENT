@@ -1,42 +1,44 @@
-[
-    {
-        "_id": "571dbbf1d4367766261acf40",
-        "userName": "anu@gmail.com",
-        "firstName": "Anurag",
-        "lastName": "Sharma",
-        "password": "123456",
-        "email": "anu@gmail.com",
-        "createdTime": "2016-04-25T06:40:49.851+0000",
-        "roleCode": "admin"
-    },
-    {
-        "_id": "5a1dc48f0d85cd0ddc24bcfa",
-        "password": "123456",
-        "userName": "rakesh",
-        "createdTime": "2017-11-28T20:18:23.882+0000",
-        "firstName": "Anurag",
-        "lastName": "Sharma",
-        "email": "rak@gmail.com",
-        "roleCode": "admin"
-    },
-{
-        "_id": "5a1ed92ec910e904f80a9f8b",
-        "password": "admin",
-        "userName": "admin",
-        "createdTime": "2017-11-28T20:18:23.882+0000",
-        "firstName": "Anurag",
-        "lastName": "Sharma",
-        "email": "rak@gmail.com",
-        "roleCode": "admin"
-    },
-{
-        "_id": "5a1ed98cc910e904f80a9f90",
-        "password": "test",
-        "userName": "test",
-        "createdTime": "2017-11-28T20:18:23.882+0000",
-        "firstName": "Anurag",
-        "lastName": "Sharma",
-        "email": "rak@gmail.com",
-        "roleCode": "admin"
-    }
-]
+{ 
+    "_id" : ObjectId("571dbbf1d4367766261acf40"), 
+    "userName" : "san@gmail.com", 
+    "firstName" : "Anurag", 
+    "lastName" : "Sharma", 
+    "password" : "123456", 
+    "email" : "admin", 
+    "createdTime" : ISODate("2016-04-25T06:40:49.851+0000"), 
+    "roleCode" : "admin", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5a1dc48f0d85cd0ddc24bcfa"), 
+    "password" : "123456", 
+    "userName" : "rakesh", 
+    "createdTime" : ISODate("2017-11-28T20:18:23.882+0000"), 
+    "__v" : NumberInt(0), 
+    "firstName" : "Anurag", 
+    "lastName" : "Sharma", 
+    "email" : "rak@gmail.com", 
+    "roleCode" : "admin"
+}
+{ 
+    "_id" : ObjectId("5a1ed92ec910e904f80a9f8b"), 
+    "password" : "admin", 
+    "userName" : "admin", 
+    "createdTime" : ISODate("2017-11-28T20:18:23.882+0000"), 
+    "__v" : NumberInt(0), 
+    "firstName" : "Anurag", 
+    "lastName" : "Sharma", 
+    "email" : "rak@gmail.com", 
+    "roleCode" : "admin"
+}
+{ 
+    "_id" : ObjectId("5a1ed98cc910e904f80a9f90"), 
+    "password" : "test", 
+    "userName" : "test", 
+    "createdTime" : ISODate("2017-11-28T20:18:23.882+0000"), 
+    "__v" : NumberInt(0), 
+    "firstName" : "Anurag", 
+    "lastName" : "Sharma", 
+    "email" : "rak@gmail.com", 
+    "roleCode" : "admin"
+}

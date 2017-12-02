@@ -112,6 +112,6 @@ var APIobj = {
     remotedbPassword: "root123"
 };
 var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
-// mongodb://db_locolink:root123@ds125716.mlab.com:25716/locolink
+ mongodb://db_locolink:root123@ds125716.mlab.com:25716?/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl
 convjson.readJSON(baseURI.href + "/" + name.userplansections + "." + name.ext.json);
 module.exports = app;

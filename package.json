@@ -60,6 +60,7 @@
     "jsonfile": "^4.0.0",
     "lite-server": "^2.3.0",
     "nodemon": "^1.12.1",
+    "request": "^2.83.0",
     "utf8": "^2.1.2"
   }
 }

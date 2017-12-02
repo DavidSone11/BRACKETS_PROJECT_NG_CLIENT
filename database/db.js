@@ -8,9 +8,15 @@ var APIobj = {
     port: 25716,
     remotedbname: "locolink",
     remotedbUser: "db_locolink",
-    remotedbPassword: "root123"
+    remotedbPassword: "root123",
+    apiKey:"X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl"
 };
-var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
+//var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
+
+//var remoteURI = "mongodb://db_locolink:root123@ds125716.mlab.com:25716?/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl";
+
+var remoteURI = "mongodb://db_locolink:root123@ds125716.mlab.com:25716/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl";
+
 var options = {
     promiseLibrary: global.Promise,
     useMongoClient: true,

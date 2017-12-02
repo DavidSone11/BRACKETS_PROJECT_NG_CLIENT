@@ -3,6 +3,7 @@ mongoose.set('debug', true)
 var r = require('../models/role.js');
 var q = require('q');
 require('mongoose-query-paginate');
+var request = require('request');
 var roles = {
     createRole: function (req, res) {
         r.create({
@@ -30,6 +31,21 @@ var roles = {
             res.json(results);
         });
     },
+
+    getremoteRoles(req,res){
+        var uri = "https://api.mlab.com/api/1/databases/locolink/collections/roles?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl"
+        var pageOptions = {
+            perPage: parseInt(req.query.limit) || 10,
+            page: parseInt(req.query.page) || 1,
+            order: req.query.order || 'roleCode'
+        }
+
+        request(uri, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body) 
+             }
+        })
+    }
 };
 module.exports = roles;
 

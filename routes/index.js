@@ -9,6 +9,7 @@ router.put('/api/v1/admin/user/', user.updateUser);
 router.put('/api/v1/admin/user/:id', user.deleteUser);
 
 router.get('/api/v1/admin/role', role.getRoles);
+router.get('/api/v1/admin/remoterole', role.getremoteRoles);
 router.post('/api/v1/admin/role', role.createRole);
 
 router.post("/api/v1/user", function (req, res, next) {
