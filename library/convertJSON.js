@@ -12,7 +12,7 @@ var readJSON = function (URI) {
             if (err) {throw err;}
             if(results){
                 s += results.toString('utf8');
-              console.log(s.length);
+             // console.log(s.length);
             }
             
 

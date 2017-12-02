@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+mongoose.set('debug', true)
 mongoose.Promise = global.Promise;
 var localdbURI = 'mongodb://127.0.0.1/locolink';
 var APIobj = {
