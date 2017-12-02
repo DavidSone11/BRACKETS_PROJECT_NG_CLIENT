@@ -18,6 +18,7 @@ Database: locolink
 * To connect using a driver via the standard MongoDB URI (what's this?):
 
 * mongodb://<dbuser>:<dbpassword>@ds125716.mlab.com:25716/locolink
+* mongodb://db_locolink:root123@ds125716.mlab.com:25716/locolink
 * mongod version: 3.4.9 (MMAPv1)
 #### Install with NPM
 
