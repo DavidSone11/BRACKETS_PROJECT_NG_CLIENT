@@ -1,9 +1,6 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-
-
 var localdbURI = 'mongodb://127.0.0.1/locolink';
-
 var APIobj = {
     protocol: 'mongodb',
     server: '@ds125716.mlab.com',
@@ -12,10 +9,7 @@ var APIobj = {
     remotedbUser: "db_locolink",
     remotedbPassword: "root123"
 };
-
-
 var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
-
 var options = {
     promiseLibrary: global.Promise,
     useMongoClient: true,
