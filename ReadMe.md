@@ -19,9 +19,9 @@
 - [Development, meeting minutes, roadmap and more.](#development-meeting-minutes-roadmap-and-more)
 
 
-# Demo
-
-Do you want to see directives in action? Visit http://angular-ui.github.io/bootstrap/!
+# MONGOLAB
+BRACKETS_PROJECT_NG_CLIENT
+172.21.0.0/16
 
 # Installation
 
