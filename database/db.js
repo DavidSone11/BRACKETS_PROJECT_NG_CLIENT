@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 var dbURI = 'mongodb://127.0.0.1/locolink';
+var remotedbURI = 'mongodb://127.0.0.1/locolink';
 
 var options = {
     promiseLibrary: global.Promise,
