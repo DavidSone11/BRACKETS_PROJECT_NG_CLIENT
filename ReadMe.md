@@ -24,7 +24,7 @@ Database: locolink
 
 
 
-###Import database
+### Import database
 
 * mongorestore -h ds125716.mlab.com:25716 -d locolink -u <user> -p <password> <input db directory>
 
