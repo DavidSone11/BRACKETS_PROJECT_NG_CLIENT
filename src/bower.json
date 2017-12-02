@@ -1,0 +1,43 @@
+{
+  "name": "BRACKET_NG_CLIENT",
+  "authors": [
+    "santosh"
+  ],
+  "description": "THIS IS SIMPLE",
+  "main": "app.config.js",
+  "keywords": [
+    "CSS",
+    "HTML",
+    "ANGULARJS",
+    "NODE",
+    "JS",
+    "REST",
+    "MONGODB"
+  ],
+  "license": "MIT",
+  "homepage": "www.bracket.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "angular": "^1.6.7",
+    "angular-loading-bar": "^0.9.0",
+    "angular-resource": "^1.6.7",
+    "angular-cookies": "^1.6.7",
+    "ngprogress-lite": "^1.0.8",
+    "angular-bootstrap": "^2.5.0",
+    "angular-ui-router": "^1.0.11",
+    "angular-route": "^1.6.7",
+    "oclazyload": "ocLazyLoad#^1.1.0",
+    "angular-animate": "^1.6.7",
+    "angular-toggle-switch": "^1.3.0",
+    "angular-sanitize": "^1.6.7"
+  }
+}

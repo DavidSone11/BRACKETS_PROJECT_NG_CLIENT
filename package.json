@@ -1,0 +1,65 @@
+{
+  "name": "bracket_project_ng_client",
+  "version": "1.2.0",
+  "description": "this is simple node js project",
+  "main": "server.js",
+  "scripts": {
+    "serve": "lite-server -c=config/bs-config.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "stop": "kill node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidSone11/BRACKETS_PROJECT_NG_CLIENT.git"
+  },
+  "keywords": [
+    "mongodb",
+    "node",
+    "js",
+    "angularjs",
+    "requirejs",
+    "meteor"
+  ],
+  "author": "santosh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DavidSone11/BRACKETS_PROJECT_NG_CLIENT/issues"
+  },
+  "homepage": "https://github.com/DavidSone11/BRACKETS_PROJECT_NG_CLIENT#readme",
+  "dependencies": {
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "express": "*",
+    "gravatar": "*",
+    "jade": "*",
+    "mongodb": "*",
+    "mongoose": "*",
+    "mongoose-deep-populate": "*",
+    "mongoose-query-paginate": "*",
+    "morgan": "*",
+    "multer": "*",
+    "q": "*",
+    "serve-favicon": "*",
+    "karma": "*",
+    "karma-chai": "*",
+    "karma-chrome-launcher": "*",
+    "karma-mocha": "*",
+    "karma-phantomjs-launcher": "*",
+    "mocha": "*",
+    "request": "*",
+    "should": "^*",
+    "supertest": "*",
+    "supertest-as-promised": "*"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "encoding": "^0.1.12",
+    "gulp": "^3.9.1",
+    "jsonfile": "^4.0.0",
+    "lite-server": "^2.3.0",
+    "nodemon": "^1.12.1",
+    "utf8": "^2.1.2"
+  }
+}

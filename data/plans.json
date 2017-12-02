@@ -1,0 +1,19 @@
+{ 
+    "_id" : "5732f50a6886e5421259e823", 
+    "planName" : "Anurag", 
+    "owner" : "santosh", 
+    "createdTime" : "2016-05-11T09:02:02.967+0000", 
+    "markDelete" : false, 
+    "isLinkGenerated" : true, 
+    "coPlanners" : [
+        "coPlan001", 
+        "coPlan002", 
+        "coPlan003", 
+        "coPlan004", 
+        "coPlan005"
+    ], 
+    "isLocked" : false, 
+    "isUnderReview" : false, 
+    "isComplete" : false
+    
+}

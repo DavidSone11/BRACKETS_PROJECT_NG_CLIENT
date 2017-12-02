@@ -1,0 +1,8 @@
+{ 
+    "_id" : "571da188d4367766261acf36", 
+    "createdTime" :"2016-04-25T04:48:08.804+0000", 
+    "privilegeCode" : "Other", 
+    "roleDescription" : "Only View Privilege", 
+    "roleCode" : "admin", 
+    
+}

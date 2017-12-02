@@ -1,0 +1,8 @@
+{ 
+    "_id" : ObjectId("571a1b24f1c870324865a5a8"), 
+    "createdTime" : ISODate("2016-04-22T12:37:56.975+0000"), 
+    "viewDashboard" : true, 
+    "default" : true, 
+    "privilegeCode" : "Other", 
+    "__v" : NumberInt(0)
+}

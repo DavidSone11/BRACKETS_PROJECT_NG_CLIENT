@@ -1,0 +1,111 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+.main-container {
+    padding: 1px 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    /*    background: rgba(0,0,0,0.68);*/
+    background-image: url("../assets/thumb-1920-85329.jpg");
+    background-size: cover;
+    color: #fff;
+    font-family: "Comfortaa", "Helvetica", sans-serif;
+    position: absolute;
+}
+
+.login {
+    box-sizing: border-box;
+    max-height: 350px;
+    max-width: 350px;
+    margin: 150px auto;
+    background-color: rgba(0, 0, 0, .68);
+    /*    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15), 0 0 0 transparent, 0 0 0 transparent, 0 0 0 transparent;*/
+}
+
+.login-icon-field {
+    height: 320px;
+    width: 100%;
+    /*background-color: red;*/
+}
+
+.box-effect {
+    -webkit-box-shadow: 5px 5px 5px -6px #777;
+    -moz-box-shadow: 5px 5px 5px -6px #777;
+    box-shadow: 5px 5px 5px -6px #777;
+}
+
+input[type=text] {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    margin: 5px 10px;
+    color: #fff;
+    width: 320px;
+    
+    background: transparent;
+   
+}
+
+input[type=text]:focus {
+   outline: none !important;
+    border-bottom:1px solid #fff;
+    box-shadow:none;
+}
+input[type=password]:focus {
+   outline: none !important;
+    border-bottom:1px solid #fff;
+    box-shadow:none;
+}
+
+input[type=password] {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    margin: 5px 10px;
+     width: 320px;
+    color: #fff;
+    border-radius: 0;
+    background: transparent;
+    
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .4);
+}
+
+input::-moz-placeholder {
+    color: rgba(255, 255, 255, .4);
+}
+
+button {
+    display: block;
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    margin: 10px 20px 10px;
+    color: #fff;
+    background-color: #22c08a;
+    border: 0;
+    transition: background-color .10s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #26d69a;
+    border: 0;
+}
+
+button:active {
+    background-color: #1eaa7a;
+    border: 0;
+}
