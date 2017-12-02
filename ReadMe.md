@@ -20,7 +20,25 @@ Database: locolink
 * mongodb://<dbuser>:<dbpassword>@ds125716.mlab.com:25716/locolink
 * mongodb://db_locolink:root123@ds125716.mlab.com:25716/locolink
 * mongod version: 3.4.9 (MMAPv1)
-#### Install with NPM
+#### MLAB IMPORT/EXPORT
+
+
+
+###Import database
+
+* mongorestore -h ds125716.mlab.com:25716 -d locolink -u <user> -p <password> <input db directory>
+
+* Export database
+
+* mongodump -h ds125716.mlab.com:25716 -d locolink -u <user> -p <password> -o <output directory>
+
+* Import collection
+
+* mongorestore -h ds125716.mlab.com:25716 -d locolink -u <user> -p <password> <input .bson file>
+
+* Export collection
+
+* mongodump -h ds125716.mlab.com:25716 -d locolink -c <collection> -u <user> -p <password> -o <output directory>
 
 
 #### Install with Bower

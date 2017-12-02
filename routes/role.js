@@ -27,8 +27,10 @@ var roles = {
         r.find({}).sort(pageOptions.order);
         query.paginate(pageOptions, function (err, results) {
             if (err) throw err;
-            res.json(results)
+            res.json(results);
         });
     },
 };
 module.exports = roles;
+
+
