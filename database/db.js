@@ -19,9 +19,9 @@ var options = {
     poolSize: 10,
     bufferMaxEntries: 0
 };
-mongoose.connect(localdbURI, options);
+mongoose.connect(remoteURI, options);
 mongoose.connection.on('connected', function () {
-    console.log('Mongoose default connection open to ' + localdbURI);
+    console.log('Mongoose default connection open to ' + remoteURI);
 });
 mongoose.connection.on('error', function (err) {
     console.log('Mongoose default connection error: ' + err);
