@@ -22,6 +22,9 @@
 # MONGOLAB
 BRACKETS_PROJECT_NG_CLIENT
 172.21.0.0/16
+url : mongodb://<dbuser>:<dbpassword>@ds125716.mlab.com:25716/locolink
+username : db_locolink
+password : root123
 
 # Installation
 
