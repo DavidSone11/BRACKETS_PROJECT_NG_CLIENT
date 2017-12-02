@@ -101,6 +101,18 @@ var name = {
 }
 
 
+var APIobj = {
+  protocol: 'mongodb',
+  server: '@ds125716.mlab.com',
+  port: 25716,
+  remotedbname: "locolink",
+  remotedbUser: "db_locolink",
+  remotedbPassword: "root123"
+};
+
+
+var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
+// mongodb://db_locolink:root123@ds125716.mlab.com:25716/locolink
 
 convjson.readJSON(baseURI.href +"/"+ name.userplansections +"."+ name.ext.json);
 module.exports = app;

@@ -1,8 +1,20 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-var dbURI = 'mongodb://127.0.0.1/locolink';
-var remotedbURI = 'mongodb://127.0.0.1/locolink';
+
+var localdbURI = 'mongodb://127.0.0.1/locolink';
+
+var APIobj = {
+    protocol: 'mongodb',
+    server: '@ds125716.mlab.com',
+    port: 25716,
+    remotedbname: "locolink",
+    remotedbUser: "db_locolink",
+    remotedbPassword: "root123"
+};
+
+
+var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
 
 var options = {
     promiseLibrary: global.Promise,
@@ -13,9 +25,9 @@ var options = {
     poolSize: 10,
     bufferMaxEntries: 0
 };
-mongoose.connect(dbURI, options);
+mongoose.connect(localdbURI, options);
 mongoose.connection.on('connected', function () {
-    console.log('Mongoose default connection open to ' + dbURI);
+    console.log('Mongoose default connection open to ' + localdbURI);
 });
 mongoose.connection.on('error', function (err) {
     console.log('Mongoose default connection error: ' + err);
