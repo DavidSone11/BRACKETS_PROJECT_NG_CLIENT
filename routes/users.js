@@ -7,12 +7,31 @@ var users = {
     createUser: function (req, res) {
         var saltRounds = 10;
         var password = req.body.password;
-        var code = req.body.roleCode;
-        bcrypt.genSalt(saltRounds, function(err, salt) {
-            bcrypt.hash(password, salt, function(err, hash) {
-                console.log(hash);
+        bcrypt.genSalt(saltRounds, function (err, salt) {
+            bcrypt.hash(password, salt, function (err, hash) {
+                var userOBJ = new user({
+                    userName: req.body.userName,
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    password: hash,
+                    email: req.body.email,
+                    code: req.body.roleCode
+
+                })
+
+                userOBJ.save((err, createdTodoObject) => {
+                    if (err) {
+                        res.status(500).send(err);
+                    }
+                    res.status(200).send(createdTodoObject);
+                });
+
+
+
             });
         });
+
+
     },
     getUsers: function (req, res) {
         var options = {
@@ -21,6 +40,16 @@ var users = {
             order: req.query.order || 'userName'
         };
         var query;
+        var query = user.find({}).sort(options.order);
+        query.paginate(options, function (err, results) {
+            if (err) throw err;
+            if (results) {
+                res.json(results);
+            }
+
+        });
+
+
         // queryResolver.resolveQuery(req.query, user, options).then(function(response) {
         //   res.json(response);
         // });
