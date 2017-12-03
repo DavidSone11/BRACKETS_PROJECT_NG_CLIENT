@@ -1,13 +1,20 @@
+var jwt = require('jsonwebtoken');
 module.exports.getUser = function (req, res) {
-    if (req.session) {
+   
         return res.json({
             "message": "token validate"
         });
-    }
+   
 }
 module.exports.createUser = function (req, res) {
-    var user = req.body.user;
-    res.json({
-        "user": user
+    var user = {
+        "email": "santosh@gmail.com",
+        "username": "santosh"
+    }
+    var token = jwt.sign(user, 'shhhhh');
+    return res.json({
+        "username": user.username,
+        "email": user.email,
+        "token": token
     })
 }

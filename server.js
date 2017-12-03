@@ -9,7 +9,7 @@ var db = require('./database/db');
 var convjson = require('./library/convertJSON.js');
 var remotemlabconfig = require('./config/remote-mlab-config.js');
 var exception = require('./custom-exception/Exception.js');
-
+var jwt = require('jsonwebtoken');
 var routes = require('./routes/index');
 var userCtrl = require('./controllers/users.js');
 var app = express();
@@ -61,16 +61,18 @@ app.all('/*', function (req, res, next) {
     }
 });
 
-app.use("/secure-api",secureRoutes);
-// secureRoutes.use(function (req, res, next) {
-//     var token = req.body.token || req.headers["token"];
-//     if (token) {
-//         res.send("TOKEN VALIDE");
-//         next();
-//     } else {
-//         res.send("PLEASE SEND THE TOKEN AGAIN");
-//     }
-// });
+app.use("/secure-api", secureRoutes);
+secureRoutes.use(function (req, res, next) {
+    var token = req.body.token || req.headers["token"];
+    if (token) {
+        res.send("TOKEN VALIDE");
+        jwt.verify(token,"shhhhh",function(err,decode){
+            next();
+        });
+    } else {
+        res.send("PLEASE SEND THE TOKEN AGAIN");
+    }
+});
 
 secureRoutes.get("/api/v1/user", userCtrl.getUser);
 secureRoutes.post("/api/v1/user", userCtrl.createUser);
@@ -134,7 +136,6 @@ var APIobj = {
     remotedbPassword: "root123"
 };
 var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.remotedbPassword + APIobj.server + ':' + APIobj.port + "/" + APIobj.remotedbname;
-mongodb://db_locolink:root123@ds125716.mlab.com:25716?/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl
-convjson.readJSON(baseURI.href + "/" + name.userplansections + "." + name.ext.json);
+mongodb: //db_locolink:root123@ds125716.mlab.com:25716?/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl
+    convjson.readJSON(baseURI.href + "/" + name.userplansections + "." + name.ext.json);
 module.exports = app;
-
