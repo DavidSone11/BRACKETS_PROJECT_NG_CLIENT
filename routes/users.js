@@ -1,10 +1,18 @@
 var mongoose = require('mongoose');
 var user = require('../models/user.js');
 var q = require('q');
+var bcrypt = require('bcrypt');
 require('mongoose-query-paginate');
 var users = {
     createUser: function (req, res) {
+        var saltRounds = 10;
+        var password = req.body.password;
         var code = req.body.roleCode;
+        bcrypt.genSalt(saltRounds, function(err, salt) {
+            bcrypt.hash(password, salt, function(err, hash) {
+                console.log(hash);
+            });
+        });
     },
     getUsers: function (req, res) {
         var options = {
