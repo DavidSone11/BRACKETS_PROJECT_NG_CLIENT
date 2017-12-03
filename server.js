@@ -62,15 +62,15 @@ app.all('/*', function (req, res, next) {
 });
 
 app.use("/secure-api",secureRoutes);
-secureRoutes.use(function (req, res, next) {
-    var token = req.body.token || req.headers["token"];
-    if (token) {
-        res.send("TOKEN VALIDE");
-        next();
-    } else {
-        res.send("PLEASE SEND THE TOKEN AGAIN");
-    }
-});
+// secureRoutes.use(function (req, res, next) {
+//     var token = req.body.token || req.headers["token"];
+//     if (token) {
+//         res.send("TOKEN VALIDE");
+//         next();
+//     } else {
+//         res.send("PLEASE SEND THE TOKEN AGAIN");
+//     }
+// });
 
 secureRoutes.get("/api/v1/user", userCtrl.getUser);
 secureRoutes.post("/api/v1/user", userCtrl.createUser);
