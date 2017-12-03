@@ -11,6 +11,7 @@ var remotemlabconfig = require('./config/remote-mlab-config.js');
 var exception = require('./custom-exception/Exception.js');
 
 var routes = require('./routes/index');
+var userCtrl = require('./controllers/users.js');
 var app = express();
 ///var validateAPIREQUEST = require('./middlewares/validateAPIRequest.js')({app:app});
 var secureRoutes = express.Router();
@@ -60,16 +61,21 @@ app.all('/*', function (req, res, next) {
     }
 });
 
+app.use("/secure-api",secureRoutes);
 secureRoutes.use(function (req, res, next) {
-    var token = req.body.token || req.body.header["token"];
+    var token = req.body.token || req.headers["token"];
     if (token) {
         res.send("TOKEN VALIDE");
+        next();
     } else {
         res.send("PLEASE SEND THE TOKEN AGAIN");
     }
 });
+
+secureRoutes.get("/api/v1/user", userCtrl.getUser);
+secureRoutes.post("/api/v1/user", userCtrl.createUser);
 //app.all('/api/v1/*', [require('./middlewares/validateRequest')]);
-app.use('/', routes);
+///app.use('/', routes);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
     var err = new Error('Not Found');
@@ -131,3 +137,4 @@ var remoteURI = APIobj.protocol + '://' + APIobj.remotedbUser + ":" + APIobj.rem
 mongodb://db_locolink:root123@ds125716.mlab.com:25716?/locolink?apiKey=X0Kwsbg8nMVftxRD98a1qIZN0aOvmgfl
 convjson.readJSON(baseURI.href + "/" + name.userplansections + "." + name.ext.json);
 module.exports = app;
+
