@@ -25,7 +25,7 @@ var roles = {
             page: parseInt(req.query.page) || 1,
             order: req.query.order || 'roleCode'
         }
-        r.find({}).sort(pageOptions.order);
+        var query =  r.find({}).sort(pageOptions.order);
         query.paginate(pageOptions, function (err, results) {
             if (err) throw err;
             res.json(results);

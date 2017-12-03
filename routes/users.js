@@ -39,7 +39,7 @@ var users = {
             page: parseInt(req.query.page) || 1,
             order: req.query.order || 'userName'
         };
-        var query;
+        
         var query = user.find({}).sort(options.order);
         query.paginate(options, function (err, results) {
             if (err) throw err;
