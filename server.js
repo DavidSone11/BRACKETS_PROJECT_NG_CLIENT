@@ -9,8 +9,11 @@ var db = require('./database/db');
 var convjson = require('./library/convertJSON.js');
 var remotemlabconfig = require('./config/remote-mlab-config.js');
 var exception = require('./custom-exception/Exception.js');
+
 var routes = require('./routes/index');
 var app = express();
+///var validateAPIREQUEST = require('./middlewares/validateAPIRequest.js')({app:app});
+var secureRoutes = express.Router();
 var raw_port = process.env.PORT;
 process.argv.forEach(function (val, index, array) {
     var port_i = val.search(/^port=/i);
@@ -41,6 +44,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'src')));
 app.all('/*', function (req, res, next) {
@@ -52,6 +57,15 @@ app.all('/*', function (req, res, next) {
         res.status(200).end();
     } else {
         next();
+    }
+});
+
+secureRoutes.use(function (req, res, next) {
+    var token = req.body.token || req.body.header["token"];
+    if (token) {
+        res.send("TOKEN VALIDE");
+    } else {
+        res.send("PLEASE SEND THE TOKEN AGAIN");
     }
 });
 //app.all('/api/v1/*', [require('./middlewares/validateRequest')]);
