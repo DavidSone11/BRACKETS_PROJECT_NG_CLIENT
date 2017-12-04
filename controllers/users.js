@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken');
 module.exports.getUser = function (req, res) {
    
-        return res.json({
+     res.json({
             "message": "token validate"
         });
    
